@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:backgroundTint="@color/DodgerBlue"
+        android:theme="@style/AppTheme">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/DodgerBlue"
+            app:menu="@menu/toolbar_menu"
+            app:title=""
+            app:titleTextColor="@color/White">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/user_dp_main"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="@color/DodgerBlue"
+                android:src="@drawable/ic_baseline_perm_identity_24"
+                app:civ_border_color="@color/Blue"
+                app:civ_border_width="1dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/user_name_main"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:fontFamily="serif-monospace"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="username"
+                android:textColor="@color/White"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/DodgerBlue"
+            app:tabIndicatorColor="@color/LightBlue"
+            app:tabTextColor="@color/White" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

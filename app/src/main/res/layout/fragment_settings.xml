@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SettingsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightBlue" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profile_dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="190dp"
+            android:src="@drawable/ic_baseline_perm_identity_24"
+            app:civ_border_color="@color/DodgerBlue"
+            app:civ_border_width="2dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="@color/DodgerBlue"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/number_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_profile"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="Number"
+            android:textColor="@color/DodgerBlue"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/number_profile"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/DodgerBlue"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/fb_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_perm_identity_24" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/ig_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_perm_identity_24" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/ws_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_perm_identity_24" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</RelativeLayout>
