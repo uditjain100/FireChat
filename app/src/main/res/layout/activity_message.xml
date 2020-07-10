@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightBlue"
+    tools:context=".MessageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/DodgerBlue"
+        android:theme="@style/AppTheme">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_message"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/DodgerBlue"
+            app:title=""
+            app:titleTextColor="@color/White">
+
+            <ImageButton
+                android:id="@+id/back_btn_message"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="@color/DodgerBlue"
+                android:src="@drawable/abc_vector_test" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/user_dp_message"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/DodgerBlue"
+                android:src="@drawable/ic_baseline_perm_identity_24"
+                app:civ_border_color="@color/Blue"
+                app:civ_border_width="1dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/user_name_message"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:fontFamily="serif-monospace"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="username"
+                android:textColor="@color/White"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@color/White"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageButton
+                android:id="@+id/emozi_btn_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:src="@drawable/ic_baseline_sentiment_satisfied_alt_24" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:hint="Message"
+                android:padding="4dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/DodgerBlue"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/send_btn_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:src="@drawable/ic_baseline_send_24" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
