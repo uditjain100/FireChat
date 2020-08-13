@@ -41,7 +41,7 @@ class RegisterActivity : AppCompatActivity() {
                 dialog.show()
                 auth.createUserWithEmailAndPassword(
                     email_input.text.toString(), passWord_input.text.toString()
-                ).addOnCompleteListener {
+                ).addOnSuccessListener {
                     val user = User(
                         uid = auth.currentUser!!.uid,
                         userName = username_input.text.toString(),

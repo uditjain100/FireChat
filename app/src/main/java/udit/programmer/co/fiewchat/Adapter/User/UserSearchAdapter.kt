@@ -20,12 +20,12 @@ class UserSearchAdapter(var users: MutableList<User>) :
         )
     }
 
-    override fun getItemCount(): Int = users!!.size
+    override fun getItemCount(): Int = users.size
 
     override fun onBindViewHolder(holder: UserSearchViewHolder, position: Int) {
-        holder.bind(users!![position])
+        holder.bind(users[position])
         holder.itemView.setOnClickListener {
-            onUserItemClickListener.onClick(users!![position])
+            onUserItemClickListener.onClick(users[position])
         }
     }
 

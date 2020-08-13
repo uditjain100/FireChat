@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LightBlue"
     tools:context=".MessageActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar_layout_message"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:backgroundTint="@color/DodgerBlue"
@@ -55,11 +55,21 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_recyclerView_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/text_message_layout"
+        android:layout_below="@id/toolbar_layout_message"
+        android:background="@color/White" />
+
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/text_message_layout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
+        android:backgroundTint="@color/LightBlue"
         app:cardCornerRadius="40dp">
 
         <LinearLayout
@@ -67,19 +77,20 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
-            android:background="@color/White"
+            android:background="@color/LightBlue"
             android:orientation="horizontal"
             android:weightSum="10">
 
             <ImageButton
-                android:id="@+id/emozi_btn_message"
+                android:id="@+id/send_image_btn_message"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/White"
-                android:src="@drawable/ic_baseline_sentiment_satisfied_alt_24" />
+                android:backgroundTint="@color/LightBlue"
+                android:src="@drawable/ic_baseline_attachment_24" />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/message_input_field_message"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="8"
@@ -94,7 +105,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/White"
+                android:backgroundTint="@color/LightBlue"
                 android:src="@drawable/ic_baseline_send_24" />
 
         </LinearLayout>
